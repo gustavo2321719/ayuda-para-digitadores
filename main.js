@@ -46,8 +46,6 @@ function modifyFile() {
                     } else {
                         alert('La cantidad ingresada no es válida.');
                     }
-                    break;
-
                     case '2':
                     const quantityToDeletea = parseInt(prompt('Indique la cantidad de FSU a eliminar:'));
                     if (!isNaN(quantityToDeletea) && quantityToDeletea > 0) {
@@ -58,18 +56,20 @@ function modifyFile() {
                         const lines = content.split('\n');
                         const modifiedContent = lines.filter(line => !multipleToDelete.some(value => line.includes(value))).join('\n');
 
-                        // Crear un Blob con el contenido modificado
-                        const blob = new Blob([modifiedContent], { type: 'text/plain' });
+                        // Crear un nuevo objeto JSZip
+                        const zip = new JSZip();
+                        zip.file(file.name, modifiedContent);
 
-                        // Crear un enlace de descarga
-                        const downloadLink = document.createElement('a');
-                        downloadLink.href = URL.createObjectURL(blob);
-
-                        // Establecer el nombre del archivo usando el nombre original
-                        downloadLink.download = file.name;
-
-                        // Simular un clic para descargar el archivo
-                        downloadLink.click();
+                        // Generar el archivo ZIP
+                        zip.generateAsync({ type: 'blob' }).then(function(content) {
+                            // Crear un enlace de descarga para el archivo ZIP
+                            const downloadLink = document.createElement('a');
+                            downloadLink.href = URL.createObjectURL(content);
+                            downloadLink.download = 'archivo_modificado.zip';
+                            document.body.appendChild(downloadLink);
+                            downloadLink.click();
+                            document.body.removeChild(downloadLink);
+                        });
                     } else {
                         alert('La cantidad ingresada no es válida.');
                     }
