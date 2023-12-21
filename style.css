@@ -1,0 +1,71 @@
+body {
+    background-color: #1f1f1f; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#titulo {
+    height: 100%;
+    text-align: center;
+    color: #ffcc00; /* Título en color amarillo */
+}
+
+input[type="file"],
+select,
+button {
+    margin: 10px 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333333; /* Fondo de elementos de formulario */
+    color: #ffffff; /* Texto blanco para elementos de formulario */
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #ffcc00; /* Color de botón */
+    color: #1f1f1f; /* Texto en color oscuro para el botón */
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ffcc00; /* Color del enlace de descarga */
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos adicionales para el modo nocturno */
+/* Puedes agregar más estilos aquí para personalizar la página */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212; /* Fondo oscuro para modo nocturno */
+    }
+
+    h1 {
+        color: #ffcc00; /* Título en color amarillo */
+    }
+
+    input[type="file"],
+    select,
+    button {
+        background-color: #1f1f1f; /* Fondo de elementos de formulario */
+        color: #ffffff; /* Texto blanco para elementos de formulario */
+    }
+
+    button {
+        background-color: #ffcc00; /* Color de botón */
+        color: #1f1f1f; /* Texto en color oscuro para el botón */
+    }
+
+    a {
+        color: #ffcc00; /* Color del enlace de descarga */
+    }
+}

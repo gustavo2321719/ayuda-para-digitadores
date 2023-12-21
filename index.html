@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>apoyo para digitadores</title>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="principal">
+    <h1 id="titulo">Apoyo para digitadores</h1>
+    <p>Sube tu archivo de envio y selecciona que es lo que quieres modificar</p>
+    <input type="file" id="fileInput">
+    
+    <select id="options">
+      <option value="eliminar-digitaciones">Opción 1: Eliminar Digitaciones</option>
+      <option value="eliminar-suministros">Opción 2: Eliminar Suministros (no disponible)</option>
+      <option value="cambiar-ubigeo">Opción 3: Cambiar Ubigeo (no disponible)</option>
+  </select>
+    <button onclick="modifyFile()">Iniciar Modificación</button>
+    
+    <a id="downloadLink" style="display: none" download="modified.txt">
+        Descargar Archivo Modificado
+    </a>
+  </div>
+</body>
+</html>
