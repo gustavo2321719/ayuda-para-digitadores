@@ -5,6 +5,10 @@ body {
     padding: 20px;
 }
 
+#posdata{
+    margin-top: 380px;
+}
+
 #titulo {
     height: 100%;
     text-align: center;
