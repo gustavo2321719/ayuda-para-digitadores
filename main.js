@@ -14,12 +14,7 @@ function modifyFile() {
 
         // Lógica de modificación según la opción seleccionada
         if (selectedOption === 'eliminar-digitaciones') {
-            const userInput = prompt(
-                '\n1. Eliminar S100 o Eliminar FSU'
-            );
-
-            switch (userInput) {
-                case '1':
+            
                     const quantityToDelete = parseInt(prompt('Indique la cantidad de S100 o FSU a eliminar:'));
                     if (!isNaN(quantityToDelete) && quantityToDelete > 0) {
                         for (let i = 0; i < quantityToDelete; i++) {
@@ -46,7 +41,6 @@ function modifyFile() {
                     } else {
                         alert('La cantidad ingresada no es válida.');
                     }
-            }
         } else if (selectedOption === 'eliminar-suministros') {
             // Lógica para eliminar suministros
         } else if (selectedOption === 'cambiar-ubigeo') {
