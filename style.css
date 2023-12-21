@@ -5,9 +5,6 @@ body {
     padding: 20px;
 }
 
-#posdata{
-    margin-top: 380px;
-}
 
 #titulo {
     height: 100%;
@@ -72,4 +69,9 @@ a:hover {
     a {
         color: #ffcc00; /* Color del enlace de descarga */
     }
+}
+
+
+#posdata{
+    margin-top: 380px;
 }
